@@ -1,0 +1,103 @@
+form{
+    position:fixed;
+    top:65%;
+    left:44%;
+    opacity: 0;
+}
+#topdiv{
+    top:0;
+    position: fixed;
+    height:15%;
+    width:100%;
+    background-color:black;
+    left:0;
+}
+#logo{
+    position: absolute;
+    top:0;
+    left:38%;
+}
+#maindiv{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 15%;
+    bottom: 0;
+    position: fixed;
+    overflow: hidden;
+}
+#leftdiv{
+    height: 100%;
+    width: 50%;
+    left: 0;
+    background-color: midnightblue;
+    position: fixed;
+    overflow: hidden;
+}
+#rightdiv{
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    right: 0;
+    background-color: royalblue;
+    position:fixed;
+    overflow: hidden;
+}
+#user{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top:25%;
+    left:35%;
+}
+#admin{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top:25%;
+    left:35%;
+    filter:contrast(200%);
+}
+#usr{
+    position: absolute;
+    top:57%;
+    left:42%;
+    font-size: 26px;
+    color: white;
+}
+#adm{
+    position: absolute;
+    top:57%;
+    left:47%;
+    font-size: 26px;
+    color: white;
+}
+#fmleft{
+    position:fixed;
+    top:65%;
+    left:44%;
+    opacity: 0;
+}
+#fmright{
+    position:fixed;
+    top:65%;
+    left:44%;
+    opacity: 0;
+}
+#sbutton{
+    text-align: center;
+}
+#backbl{
+    position: absolute;
+    opacity: 0;
+    top:45%;
+}
+#backbr{
+    position: absolute;
+    right: 0%;
+    top:40%;
+    opacity: 0;
+    transform: rotate(180deg);
+
+}
