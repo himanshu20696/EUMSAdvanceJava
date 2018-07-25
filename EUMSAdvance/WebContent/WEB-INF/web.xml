@@ -24,4 +24,14 @@
     <servlet-name>HRLoginServlet</servlet-name>
     <url-pattern>/HRLoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeEnrolledTrainingServlet</display-name>
+    <servlet-name>EmployeeEnrolledTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.EmployeeEnrolledTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeEnrolledTrainingServlet</servlet-name>
+    <url-pattern>/EmployeeEnrolledTrainingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
