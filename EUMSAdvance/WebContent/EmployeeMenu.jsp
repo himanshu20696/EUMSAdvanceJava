@@ -11,7 +11,7 @@
 <div id="menubar">
         <ul id="menu">
           <li ><a href="EmployeeScreen.jsp">Home</a></li>
-          <li><a href="#">Upcomming Trainings</a></li>
+          <li><a href="./EmployeeUpcommingTrainingServlet">Upcomming Trainings</a></li>
           <li><a href="./EmployeeEnrolledTrainingServlet">Enrolled Trainings</a></li>
           <li><a href="#">Fill Feedback</a></li>
           <li><a href="Suggestion.jsp">Suggestion</a></li>

@@ -3,11 +3,41 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" title="style" />
+<link rel="stylesheet" type="text/css" href="table.css" title="style" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<style>
+#head{
+background-color:#add8e6;}</style>
 <body bgcolor="midnightblue">
 <%@include file="EmployeeMenu.jsp" %>
+<img src="images/userimage.png" id="userimage" style="position:absolute;left:16%;top:20%;height:200px;width:200px;">
+<table border="1" style="position:absolute;left:45%;top:18%">
+	<tr>
+		<td id="head">Employee ID</td>
+		<td>${employee.employeeID}</td>
+	</tr>
+	<tr>
+		<td id="head">Name</td>
+		<td>${employee.employeeName}</td>
+	</tr>
+	<tr>
+		<td id="head">E-mail</td>
+		<td>${employee.employeeEmail}</td>
+	</tr>
+	<tr>
+		<td id="head">Team</td>
+		<td>${employee.employeeTeam}</td>
+	</tr>
+	<tr>
+		<td id="head">Address</td>
+		<td>${employee.employeeAddress}</td>
+	</tr>
+	<tr>
+		<td id="head">Contact No.</td>
+		<td>${employee.employeeContactNo}</td>
+	</tr>
+</table>
 </body>
 </html>

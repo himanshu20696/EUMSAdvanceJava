@@ -34,4 +34,24 @@
     <servlet-name>EmployeeEnrolledTrainingServlet</servlet-name>
     <url-pattern>/EmployeeEnrolledTrainingServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeUpcommingTrainingServlet</display-name>
+    <servlet-name>EmployeeUpcommingTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.EmployeeUpcommingTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeUpcommingTrainingServlet</servlet-name>
+    <url-pattern>/EmployeeUpcommingTrainingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeRequestTrainingServlet</display-name>
+    <servlet-name>EmployeeRequestTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.EmployeeRequestTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeRequestTrainingServlet</servlet-name>
+    <url-pattern>/EmployeeRequestTrainingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
