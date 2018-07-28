@@ -2,7 +2,6 @@ package com.eums.controllers;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -26,17 +25,28 @@ public class EmployeeRequestTrainingServlet extends HttpServlet {
 		String[] selectedTraining = request.getParameterValues("enroll");
 		List<String> selectedTrainingList = Arrays.asList(selectedTraining);
 		EmployeeService employeeService = new EmployeeServiceImpl();
-		HashMap<Integer, Boolean> resultMap = new HashMap<>();
+		HashMap<Integer, String> resultMap = new HashMap<>();
 		for(String s:selectedTrainingList)
 		{
+			int flag = 0;
 			int trainingId = Integer.parseInt(s);
 			boolean result = false;
+			String outcome = null;
 			try {
 				result = employeeService.enrollForTraining(trainingId, employee.getEmployeeID());
+				flag = 1;
 			} catch (SQLException e) {
 				e.printStackTrace();
+				outcome = "alreadyrequested";
+				flag = 2;
 			}
-			resultMap.put(trainingId, result);
+			System.out.println(result);
+			if(result && flag==1)
+				outcome = "requested";
+			else if(!result && flag==1)
+				outcome = "rejected";
+			System.out.println(outcome);
+			resultMap.put(trainingId, outcome);
 		}
 		httpSession.setAttribute("selectedTraining", resultMap);
 		response.sendRedirect("./EmployeeViewUpcommingTraining.jsp");
