@@ -15,7 +15,7 @@
           <li><a href="./EmployeeEnrolledTrainingServlet">Enrolled Trainings</a></li>
           <li><a href="./FillFeedbackServlet">Fill Feedback</a></li>
           <li><a href="Suggestion.jsp">Suggestion</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><a href="./logout.jsp">Log Out</a></li>
         </ul>
       </div>
 </body>

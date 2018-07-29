@@ -9,30 +9,6 @@
 <link rel="stylesheet" type="text/css" href="table.css" title="style" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<% HashMap<Integer, Boolean> selectedTraining = new HashMap<>();
-   selectedTraining = (HashMap<Integer, Boolean>)request.getAttribute("selectedTraining");
-   if(selectedTraining != null)
-   {
-	   Set<Integer> keys = selectedTraining.keySet();
-	   for(Integer i:keys){
-		   Boolean res = selectedTraining.get(i);
-		   if(res){
-			  %>
-	        	<script type="text/javascript">
-				document.getElementById('error').innerHTML = "Request For Training ID "+'<%= i %>'+" Has Been Send To HR. Please Wait For Comformation";
-				</script>
-	          <% 
-		   }
-		   else{
-			   %>
-	        	<script type="text/javascript">
-				document.getElementById('error').innerHTML = "You Request For Training ID "+'<%= i %>'+" Has Been Rejected As You Are Already Enrolled For A Training In That Period";
-				</script>
-	          <%
-		   }
-	   }		
-    }
-%>
 </head>
 <body bgcolor="midnightblue">
 <%@include file="EmployeeMenu.jsp" %><br><br>
@@ -75,6 +51,45 @@
     margin: 4px 2px;
     cursor: pointer;"></center>
 </form><br><br>
-<div id="error" style="text-align: center;position: absolute;bottom:0px;left:0;width:100%;background: yellow; color:midnightblue"></div>
+<div id="error" style="text-align: center;width:100%;background: yellow; color:midnightblue"></div>
+
+<% 
+HashMap<Integer, String> selectedTraining = new HashMap<>();
+selectedTraining = (HashMap<Integer, String>)session.getAttribute("selectedTraining");
+System.out.println(selectedTraining);
+System.out.println("in scriplet");
+if(selectedTraining != null)
+	{
+	System.out.println("in if block");
+		Set<Integer> keys = selectedTraining.keySet();
+	    for(Integer i:keys){
+	    	System.out.println("in for");
+			String res = selectedTraining.get(i);
+			if(res.equals("requested")){
+				%>
+	        	<script type="text/javascript">
+				document.getElementById('error').innerHTML = "Request For Training ID "+'<%= i %>'+" Has Been Send To HR. Please Wait For Comformation";
+				</script>
+	        	<% 
+		    }
+		   else if(res.equals("rejected")){
+				%>
+	        	<script type="text/javascript">
+				document.getElementById('error').innerHTML = "Your Request For Training ID "+'<%= i %>'+" Has Been Rejected As You Are Already Enrolled For A Training In That Period";
+				</script>
+	            <%
+		    }
+		   else if(res.equals("alreadyrequested")){
+				%>
+	        	<script type="text/javascript">
+				document.getElementById('error').innerHTML = "You Have Already Requested For Training ID "+'<%= i %>'+". Your Request Is Still Pending For HR Approval";
+				</script>
+	            <%
+		    }
+	    }
+	    session.removeAttribute("selectedTraining");
+   }
+%>
+
 </body>
 </html>
