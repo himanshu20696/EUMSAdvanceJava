@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Create Training</title>
 <link rel="stylesheet" type="text/css" href="hrtable.css" title="style" />
+<link rel="stylesheet" type="text/css" href="hrbutton.css" title="style" />
 </head>
 <body bgcolor="royalblue">
 <%@ include file="HRMenu.jsp" %>
@@ -50,15 +51,6 @@
 	<input type="radio" name="mandatory" value="false">False</td>
 </tr>
 </table>
-<input type="submit" value="Submit" style="background-color: #ADD8E6;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;"></form>
+<center><input type="submit" id="button" value="Submit"></center></form>
 </body>
 </html>

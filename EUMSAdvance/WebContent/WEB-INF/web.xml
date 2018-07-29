@@ -94,4 +94,34 @@
     <servlet-name>ViewTrainingServlet</servlet-name>
     <url-pattern>/ViewTrainingServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewAvailableFeedbackServlet</display-name>
+    <servlet-name>ViewAvailableFeedbackServlet</servlet-name>
+    <servlet-class>com.eums.controllers.ViewAvailableFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewAvailableFeedbackServlet</servlet-name>
+    <url-pattern>/ViewAvailableFeedbackServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewFeedbackRequest</display-name>
+    <servlet-name>ViewFeedbackRequest</servlet-name>
+    <servlet-class>com.eums.controllers.ViewFeedbackRequest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewFeedbackRequest</servlet-name>
+    <url-pattern>/ViewFeedbackRequest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewFeedbackRequestServlet</display-name>
+    <servlet-name>ViewFeedbackRequestServlet</servlet-name>
+    <servlet-class>com.eums.controllers.ViewFeedbackRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewFeedbackRequestServlet</servlet-name>
+    <url-pattern>/ViewFeedbackRequestServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

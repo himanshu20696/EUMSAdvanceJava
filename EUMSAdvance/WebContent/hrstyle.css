@@ -8,7 +8,8 @@ html
 body
 { font: normal .80em 'trebuchet ms', arial, sans-serif;
   /*background: #F0EFE2 url(background.png) repeat;*/
-  color: royalblue;}
+  background-color:royalblue;
+  color: white;}
 
 p
 { padding: 0 0 20px 0;

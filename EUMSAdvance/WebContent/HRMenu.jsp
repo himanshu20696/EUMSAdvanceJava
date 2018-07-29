@@ -8,13 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id="menubar" style="width:1058px;">
+<div id="menubar" style="width:1080px;">
         <ul id="menu">
           <li ><a href="HRScreen.jsp">Home</a></li>
           <li><a href="CreateTraining.jsp">Create Training</a></li>
           <li><a href="#">Modify Training</a></li>
           <li><a href="./ViewTrainingServlet">View Trainings</a></li>
-          <li><a href="#">Feedback</a></li>
+          <li><a href="./ViewAvailableFeedbackServlet">View Feedback</a></li>
           <li><a href="#">Approvals</a></li>
           <li><a href="hrlogout.jsp">Log Out</a></li>
         </ul>

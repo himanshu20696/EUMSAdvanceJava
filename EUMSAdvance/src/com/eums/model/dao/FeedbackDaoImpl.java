@@ -128,7 +128,11 @@ public class FeedbackDaoImpl implements FeedbackDao {
 		Statement stmt=null;
 		con=DBConnection.getDBConnection();
 		stmt=con.createStatement();
-		ResultSet rs = stmt.executeQuery("select DISTINCT tid,tname from training_details");
+		ResultSet rs = stmt.executeQuery("select DISTINCT "
+				+ "feedback.training__id,training_details.tname "
+				+ "from feedback "
+				+ "inner join training_details on "
+				+ "feedback.training__id=training_details.tid");
 		while(rs.next()){
 			int tid = rs.getInt(1);
 			String tname = rs.getString(2);
