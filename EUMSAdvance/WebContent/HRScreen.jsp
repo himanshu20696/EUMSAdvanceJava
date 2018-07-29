@@ -14,7 +14,7 @@ color:white;}</style>
 <body bgcolor="royalblue">
 <%@include file="HRMenu.jsp" %>
 <img src="images/userimage.png" id="userimage" style="position:absolute;left:16%;top:20%;height:200px;width:200px;">
-<table border="1" style="position:absolute;left:45%;top:18%">
+<table border="1" style="position:absolute;left:35%;top:18%">
 	<tr>
 		<td id="head">Employee ID</td>
 		<td>${employee.employeeID}</td>
