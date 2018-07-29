@@ -54,4 +54,24 @@
     <servlet-name>EmployeeRequestTrainingServlet</servlet-name>
     <url-pattern>/EmployeeRequestTrainingServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FillFeedbackServlet</display-name>
+    <servlet-name>FillFeedbackServlet</servlet-name>
+    <servlet-class>com.eums.controllers.FillFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FillFeedbackServlet</servlet-name>
+    <url-pattern>/FillFeedbackServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetrieveFeedbackServlet</display-name>
+    <servlet-name>RetrieveFeedbackServlet</servlet-name>
+    <servlet-class>com.eums.controllers.RetrieveFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveFeedbackServlet</servlet-name>
+    <url-pattern>/RetrieveFeedbackServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
