@@ -11,12 +11,12 @@
 <div id="menubar" style="width:1058px;">
         <ul id="menu">
           <li ><a href="HRScreen.jsp">Home</a></li>
-          <li><a href="#">Create Trainings</a></li>
-          <li><a href="#">Modify Trainings</a></li>
-          <li><a href="#">View Trainings</a></li>
+          <li><a href="CreateTraining.jsp">Create Training</a></li>
+          <li><a href="#">Modify Training</a></li>
+          <li><a href="./ViewTrainingServlet">View Trainings</a></li>
           <li><a href="#">Feedback</a></li>
           <li><a href="#">Approvals</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><a href="hrlogout.jsp">Log Out</a></li>
         </ul>
       </div>
 </body>

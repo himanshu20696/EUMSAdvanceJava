@@ -74,4 +74,24 @@
     <servlet-name>RetrieveFeedbackServlet</servlet-name>
     <url-pattern>/RetrieveFeedbackServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateTrainingServlet</display-name>
+    <servlet-name>CreateTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.CreateTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateTrainingServlet</servlet-name>
+    <url-pattern>/CreateTrainingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewTrainingServlet</display-name>
+    <servlet-name>ViewTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.ViewTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewTrainingServlet</servlet-name>
+    <url-pattern>/ViewTrainingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

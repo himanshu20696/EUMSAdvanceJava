@@ -19,7 +19,7 @@ else if (session.getAttribute("fillFeedback").equals(1)){%>
 <center><h1>Thank you for the Feedback !</h1></center>
 <%}
 else {%>
-<center><h1>Feedback for ${fillFeedback}</h1></center>
+<center><h1>Feedback for Training ID : ${fillFeedback}</h1></center>
 <form action="./RetrieveFeedbackServlet" method="post">
 <table id="table">
 	<tr>
