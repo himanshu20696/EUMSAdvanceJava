@@ -9,13 +9,9 @@
 </head>
 <body bgcolor="royalblue">
 <%@include file="HRMenu.jsp" %><br><br><br><br><br><br><br><br><br><br><br><br>
+<form action="./LogoutServlet" method="post">
 <center><h1>Are You Sure You Want To Logout</h1></center>
-<center><input type="button" value="Yes" id="button" onclick="logout()"></center>
-<script>
-function logout() {
-<%  session.invalidate(); %>
-  location.href='Login.jsp';
-}
-</script>
+<center><input type="submit" value="Yes" id="button"></center>
+</form>
 </body>
 </html>

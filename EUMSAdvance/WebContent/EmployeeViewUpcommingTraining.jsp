@@ -13,6 +13,25 @@
 <body bgcolor="midnightblue">
 <%@include file="EmployeeMenu.jsp" %><br><br>
 <center><h1>Upcoming Training</h1></center><br><br>
+<script>
+function valthisform()
+{
+    var checkboxs=document.getElementsByName("enroll");
+    var okay=false;
+    for(var i=0,l=checkboxs.length;i<l;i++)
+    {
+        if(checkboxs[i].checked)
+        {
+            okay=true;
+            break;
+        }
+    }
+    if(!okay){
+    alert("Please Select A Training First");
+    return false;
+    }
+}
+</script>
 <form action="./EmployeeRequestTrainingServlet" method="post">
 <table id="table">
 	<tr>
@@ -40,7 +59,7 @@
 	</tr>
 </c:forEach>
 </table>
-<center><input type="submit" value="Enroll For Training" style="background-color: #ADD8E6;
+<center><input type="submit" value="Enroll For Training" onclick="return valthisform();" style="background-color: #ADD8E6;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -51,7 +70,7 @@
     margin: 4px 2px;
     cursor: pointer;"></center>
 </form><br><br>
-<div id="error" style="text-align: center;width:100%;background: yellow; color:midnightblue"></div>
+<div id="error" style="font-size: 18px;text-align: center;width:100%;background: yellow; color:midnightblue"></div>
 
 <% 
 HashMap<Integer, String> selectedTraining = new HashMap<>();
@@ -68,21 +87,21 @@ if(selectedTraining != null)
 			if(res.equals("requested")){
 				%>
 	        	<script type="text/javascript">
-				document.getElementById('error').innerHTML = "Request For Training ID "+'<%= i %>'+" Has Been Send To HR. Please Wait For Comformation";
+	        	document.getElementById('error').insertAdjacentHTML('beforeend', "Request For Training ID "+'<%= i %>'+" Has Been Send To HR. Please Wait For Comformation<br>");
 				</script>
 	        	<% 
 		    }
 		   else if(res.equals("rejected")){
 				%>
 	        	<script type="text/javascript">
-				document.getElementById('error').innerHTML = "Your Request For Training ID "+'<%= i %>'+" Has Been Rejected As You Are Already Enrolled For A Training In That Period";
+	        	document.getElementById('error').insertAdjacentHTML('beforeend', "Your Request For Training ID "+'<%= i %>'+" Has Been Rejected As You Are Already Enrolled For A Training In That Period<br>");
 				</script>
 	            <%
 		    }
 		   else if(res.equals("alreadyrequested")){
 				%>
 	        	<script type="text/javascript">
-				document.getElementById('error').innerHTML = "You Have Already Requested For Training ID "+'<%= i %>'+". Your Request Is Still Pending For HR Approval";
+	        	document.getElementById('error').insertAdjacentHTML('beforeend', "You Have Already Requested For Training ID "+'<%= i %>'+". Your Request Is Still Pending For HR Approval<br>");
 				</script>
 	            <%
 		    }
