@@ -167,4 +167,14 @@
     <servlet-name>HRModifyTrainingServlet</servlet-name>
     <url-pattern>/HRModifyTrainingServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ApproveTrainingServlet</display-name>
+    <servlet-name>ApproveTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.ApproveTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApproveTrainingServlet</servlet-name>
+    <url-pattern>/ApproveTrainingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

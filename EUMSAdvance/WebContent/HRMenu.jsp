@@ -15,7 +15,7 @@
           <li><a href="./ViewTrainingModificationServlet">Modify Training</a></li>
           <li><a href="./ViewTrainingServlet">View Trainings</a></li>
           <li><a href="./ViewAvailableFeedbackServlet">View Feedback</a></li>
-          <li><a href="#">Approvals</a></li>
+          <li><a href="./ApproveTrainingServlet">Approvals</a></li>
           <li><a href="hrlogout.jsp">Log Out</a></li>
         </ul>
       </div>

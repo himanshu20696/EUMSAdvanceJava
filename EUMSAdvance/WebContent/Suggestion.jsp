@@ -12,14 +12,14 @@
        <br><br><br><br>
         <h1>Write Suggestion Here</h1>
         <br>
-        <form action="#" method="post" ">
+        <form action="mailto:admin@eums.com" method="post" enctype="text/plain">
           <div class="form_settings" style="color: white;">
             <p>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="text" name="name" /></p><br>
             <p>Email Address&nbsp;&nbsp;&nbsp;&nbsp;<input  type="email" name="emailId"  /></p><br>
             <p>Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea  rows="8" cols="50" name="your_enquiry"></textarea></p>
             <br>
             <br>
-            <p style="padding-top: 15px"><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+            <p style="padding-top: 15px;margin-left:-7%;"><input class="submit" type="submit" name="contact_submitted" value="Submit" /></p>
           </div>
         </form>
 

@@ -36,11 +36,14 @@ public class CreateTrainingServlet extends HttpServlet {
 		training.setMaxcapacity(Integer.parseInt(request.getParameter("maxcapacity")));
 		training.setAvailablecapacity(Integer.parseInt(request.getParameter("maxcapacity")));
 		training.setMandatory(Boolean.parseBoolean(request.getParameter("mandatory")));
+		boolean created=false;
 		try {
-			hrService.createTrainingInCalender(training);
+			created=hrService.createTrainingInCalender(training);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		session.setAttribute("created", created);
+		response.sendRedirect("./TrainingCreated.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
