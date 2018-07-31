@@ -141,4 +141,9 @@ public class HRServiceImpl implements HRService {
 	public Employee fetchHRDetails(String employeeId) throws SQLException {
 		return employeeDao.searchHRRecord(employeeId);
 	}
+
+	@Override
+	public Training fetchTrainingDetails(int trainingId) throws SQLException {
+		return trainingDao.searchRecord(trainingId);
+	}
 }

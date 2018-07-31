@@ -137,4 +137,34 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewTrainingModificationServlet</display-name>
+    <servlet-name>ViewTrainingModificationServlet</servlet-name>
+    <servlet-class>com.eums.controllers.ViewTrainingModificationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewTrainingModificationServlet</servlet-name>
+    <url-pattern>/ViewTrainingModificationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HRModifyTrainingInputServlet</display-name>
+    <servlet-name>HRModifyTrainingInputServlet</servlet-name>
+    <servlet-class>com.eums.controllers.HRModifyTrainingInputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HRModifyTrainingInputServlet</servlet-name>
+    <url-pattern>/HRModifyTrainingInputServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HRModifyTrainingServlet</display-name>
+    <servlet-name>HRModifyTrainingServlet</servlet-name>
+    <servlet-class>com.eums.controllers.HRModifyTrainingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HRModifyTrainingServlet</servlet-name>
+    <url-pattern>/HRModifyTrainingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

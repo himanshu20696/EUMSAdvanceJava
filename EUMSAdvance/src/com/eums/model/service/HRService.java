@@ -22,4 +22,5 @@ public interface HRService {
 	LinkedHashMap<Integer, String> displayAvailableTrainingFeedback() throws SQLException;
 	ArrayList<Training> viewTrainings() throws SQLException;
 	Employee fetchHRDetails(String employeeId) throws SQLException;
+	Training fetchTrainingDetails(int trainingId) throws SQLException;
 }

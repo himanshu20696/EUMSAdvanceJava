@@ -12,7 +12,7 @@
         <ul id="menu">
           <li ><a href="HRScreen.jsp">Home</a></li>
           <li><a href="CreateTraining.jsp">Create Training</a></li>
-          <li><a href="#">Modify Training</a></li>
+          <li><a href="./ViewTrainingModificationServlet">Modify Training</a></li>
           <li><a href="./ViewTrainingServlet">View Trainings</a></li>
           <li><a href="./ViewAvailableFeedbackServlet">View Feedback</a></li>
           <li><a href="#">Approvals</a></li>

@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.eums.model.dao.FeedbackDao;
-import com.eums.model.dao.FeedbackDaoImpl;
 import com.eums.model.entity.Employee;
 import com.eums.model.entity.Feedback;
 import com.eums.model.service.EmployeeService;

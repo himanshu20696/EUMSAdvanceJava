@@ -188,7 +188,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 		ArrayList<RequestedTraining> requestedTrainingEmployeeList = new ArrayList<>();
 		for(RequestedTraining requestedTraining:requestedTrainingList)
 		{
-			if((requestedTraining.getEid().equals(employeeId)) && (requestedTraining.isNotified()==false))
+			if((requestedTraining.getEid().equals(employeeId)) && 
+					(requestedTraining.isNotified()==false) && 
+					(requestedTraining.isProcessed()==true))
 			{
 				requestedTrainingEmployeeList.add(requestedTraining);
 			}
