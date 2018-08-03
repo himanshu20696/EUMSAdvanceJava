@@ -31,8 +31,8 @@ public class CreateTrainingServlet extends HttpServlet {
 		training.setTname(request.getParameter("tname"));
 		training.setTtype(request.getParameter("ttype"));
 		training.setTrainername(request.getParameter("trainername"));
-		training.setEdate(Date.valueOf(request.getParameter("sdate")));
-		training.setSdate(Date.valueOf(request.getParameter("edate")));
+		training.setSdate(Date.valueOf(request.getParameter("sdate")));
+		training.setEdate(Date.valueOf(request.getParameter("edate")));
 		training.setMaxcapacity(Integer.parseInt(request.getParameter("maxcapacity")));
 		training.setAvailablecapacity(Integer.parseInt(request.getParameter("maxcapacity")));
 		training.setMandatory(Boolean.parseBoolean(request.getParameter("mandatory")));

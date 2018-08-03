@@ -15,15 +15,37 @@
 <form action="./HRModifyTrainingServlet" method="post">
 <table id="table">
 <tr>
-	<td>Training Name : </td>
-	<td><input type="text" name="trainingId" value="${trainingModify.tname}"></td>
+	<th>Parameter</th>
+	<th>Input</th>
 </tr>
 <tr>
+	<td>Training ID : </td>
+	<td><input type="text" name="tid" value="${trainingModify.tid}" readonly></td>
+</tr>
+<tr>
+	<td>Training Name : </td>
+	<td><input type="text" name="tname" value="${trainingModify.tname}"></td>
+</tr>
+<tr>
+	<c:set var = "selectedTraining" value = "${trainingModify.ttype}"/>
 	<td>Training Type : </td>
-	<td><select name="ttype">
-	<option value="Technical">Technical</option>
-	<option value="HR">HR</option>
-	<option value="QMS">QMS</option></select></td>
+	<td><select name="trainingtype">
+	<c:if test = "${selectedTraining == 'Technical'}">
+		<option value="Technical" selected>Technical</option>
+		<option value="HR">HR</option>
+		<option value="QMS">QMS</option>
+	</c:if>
+	<c:if test = "${selectedTraining == 'HR'}">
+		<option value="Technical">Technical</option>
+		<option value="HR" selected>HR</option>
+		<option value="QMS">QMS</option>
+	</c:if>
+	<c:if test = "${selectedTraining == 'QMS'}">
+		<option value="Technical">Technical</option>
+		<option value="HR">HR</option>
+		<option value="QMS" selected>QMS</option>
+	</c:if>
+	</select></td>
 </tr>
 <tr>	
 	<td>Trainer Name : </td>
@@ -43,10 +65,19 @@
 	<td>Max Capacity : </td>
 	<td><input type="number" name="maxcapacity" min="5" max="50" value="${trainingModify.maxcapacity}"></td>
 </tr>
-<tr>	
+<tr>
+	<c:set var = "mandatory" value = "${trainingModify.mandatory}"/>	
  	<td>Mandatory : </td>
-	<td><input type="radio" name="mandatory" value="true">True
-	<input type="radio" name="mandatory" value="false">False</td>
+	<td>
+	<c:if test = "${mandatory}">
+	<input type="radio" name="mandatory" value="true" checked>True
+	<input type="radio" name="mandatory" value="false">False
+	</c:if>
+	<c:if test = "${!mandatory}">
+	<input type="radio" name="mandatory" value="true">True
+	<input type="radio" name="mandatory" value="false" checked>False
+	</c:if>
+	</td>
 </tr>
 </table>
 <center><input type="submit" id="button" value="Submit"></center>
